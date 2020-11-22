@@ -1,0 +1,108 @@
+// Carte de l'index
+.card {
+ display: flex;
+ width: 300px;
+ height: 200px;
+ border-radius: 10px;
+ background-color: $gtarose;
+ margin: 20px;
+ box-sizing: border-content;
+ box-shadow: -1px 1px 5px black;
+ font-family: $cartefont;
+ overflow: hidden;
+}
+
+.card a {
+ position: absolute;
+ bottom: 0;
+ right: 10px;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-family: $cartefont;
+}
+
+.card-img {
+ position: absolute;
+ background-image: url(https://images.pexels.com/photos/1886096/pexels-photo-1886096.jpeg?cs=srgb&dl=pexels-adrianna-calvo-1886096.jpg&fm=jpg);
+ background-position: center;
+ background-size: cover;
+ width: 100%;
+ height: 150px;
+ top: 0;
+}
+// Carte nouveau cocktail :
+
+.nouveaucocktail {
+ display: flex;
+ position: relative;
+ width: 300px;
+ height: 200px;
+ border-radius: 10px;
+ background-color: $gtarose;
+ margin: 20px;
+ box-shadow: -1px 1px 5px black;
+ display: inline-block;
+ }
+
+.nouveaucocktail label {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  font-family: $gtafont;
+ }
+
+.form-control {
+  display: flex;
+  position: absolute;
+  top: 27px;
+  border-radius: 50px;
+  width: 250px;
+  background-color: white;
+  transition: 0.5s ease;
+}
+
+.form-control:hover {
+box-shadow: 0px 0px 10px $gtavert;
+transition: 0.5s ease;
+}
+
+.btn-submit {
+  display: flex;
+  position: absolute;
+  list-style: none;
+  text-decoration: none;
+  bottom: 27px;
+  border-radius: 50px;
+  width: 250px;
+  background-color: $gtavert;
+  box-shadow: 3px 0px 0px $gtavert;
+  opacity: 0.7;
+  font-family: $gtafont;
+  transition: 0.5s ease;
+  font-weight: bold;
+  color: $gtarose;
+}
+
+.btn-submit:hover {
+  opacity: 1;
+  color: white;
+  text-shadow: 3px 0px 0px #DCC2E4;
+  font-weight: bold;
+  transition: 1s ease;
+}
+
+.cardshow {
+ display: flex;
+ display: inline-block;
+ width: 300px;
+ height: 100%;
+ border-radius: 10px;
+ background-color: $gtarose;
+ margin: 20px;
+ box-sizing: border-content;
+ box-shadow: -1px 1px 5px black;
+ font-family: $cartefont;
+ overflow: hidden;
+ color: $gtavert;
+}
+

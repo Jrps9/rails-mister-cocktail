@@ -1,0 +1,15 @@
+<h1>Mets la dose</h1>
+<div class="ladose">
+  <div class="cardose">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :name %>
+  <%= f.association :ingredient %>
+  <br>
+  <%= f.submit %>
+<% end %>
+</div>
+
+<%= link_to "Homepage", cocktails_path%>
+</div>

@@ -1,1 +1,45 @@
 // Specific CSS for your home-page
+
+* {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(106,240,232,0.4)),
+                    url(https://images.pexels.com/photos/1886096/pexels-photo-1886096.jpeg?cs=srgb&dl=pexels-adrianna-calvo-1886096.jpg&fm=jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  list-style: none;
+  height: 100%;
+}
+
+h1 {
+  font-family: $gtafont;
+  font-size: 100px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: $gtavert;
+  letter-spacing: 10px;
+  font-weight: bold;
+  animation: 30s allumage 1s linear forwards;
+}
+
+p {
+  font-family: $cartefont;
+  color: blue;
+}
+
+a {
+  font-family: $cartefont;
+}

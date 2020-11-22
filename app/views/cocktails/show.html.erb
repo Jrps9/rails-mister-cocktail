@@ -1,0 +1,28 @@
+<h1>détail du cocktail</h1>
+<div class="showcocktail">
+<div class="cardshow">
+<p>Nom du cocktail :
+<br>
+<%= @cocktail.name %>
+</p>
+<p>A l'intérieur de ce breuvage :</p>
+<ul class="list-group">
+  <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item"><%= dose.description %>:
+        <%=dose.ingredient.name %>
+        </li>
+       <%= link_to "Delete Dose",
+        dose_path(dose),
+        method: :delete,
+        data: { confirm: "Are you sure?"}%>
+</ul>
+<% end %>
+</div>
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail)%>
+<%= link_to "Update cocktail", edit_cocktail_path(@cocktail)%>
+  <%= link_to "Delete Cocktail",
+          cocktail_path(@cocktail),
+          method: :delete,
+          data: { confirm: "Are you sure?"}%>
+<%= link_to "Homepage", cocktails_path%>
+</div>

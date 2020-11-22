@@ -1,0 +1,17 @@
+.cocktaillist {
+  display: flex;
+  position: relative;
+  width: 1500px;
+  height: 600px;
+  flex-wrap: wrap;
+}
+
+.showcocktail {
+  display: flex;
+  display: inline-block;
+  color: $gtavert;
+}
+
+.ladose {
+  height: 100px;
+}

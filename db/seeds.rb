@@ -18,14 +18,21 @@
 # end
 
 
-# @dictionnary = JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{@word}").read)
+# # @dictionnary = JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{@word}").read)
+# p "insertion des ingredients"
+# lesingredients = JSON.parse(open("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").read)
+# lesingredients.each do |ingredient|
+#   newingredient = Ingredient.create(name: ingredient)
+#   newingredient.save
+# end
+# p "ingredients inséré"
+p "insert ingredients"
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+ingredients_list = open(url).read
+ingredients = JSON.parse(ingredients_list)
 
-lesingredients = JSON.parse(open("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").read)
-lesingredients.each do |ingredient|
-  newingredient = Ingredient.create(name: ingredient)
-  newingredient.save
+ingredients['drinks'].each do |value|
+  puts value['strIngredient1']
+  Ingredient.create!(name: value['strIngredient1'])
 end
-
-# Ingredient.create(name: "lemon")
-# Ingredient.create(name: "ice")
-# Ingredient.create(name: "mint leaves")
+p "insert ingredients"
