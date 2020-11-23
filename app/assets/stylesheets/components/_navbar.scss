@@ -1,6 +1,18 @@
-.navbar-lewagon {
+.menu {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  background: #e8e8e8;
+  border-radius: 10px;
+  a {
+    text-decoration: none;
+    margin:10px 20px 10px 20px;
+    transition: 0.5s ease;
+    &:hover {
+      color: $gtarose;
+      transition: 0.5s ease;
+      opacity: 1;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

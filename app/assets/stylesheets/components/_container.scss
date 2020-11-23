@@ -1,8 +1,7 @@
 .cocktaillist {
   display: flex;
-  position: relative;
   width: 1500px;
-  height: 600px;
+  min-width:300px;
   flex-wrap: wrap;
 }
 
@@ -13,5 +12,5 @@
 }
 
 .ladose {
-  height: 100px;
+  height: 150px;
 }

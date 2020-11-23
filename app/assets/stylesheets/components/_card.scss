@@ -1,6 +1,7 @@
 // Carte de l'index
 .card {
  display: flex;
+ position: relative;
  width: 300px;
  height: 200px;
  border-radius: 10px;
@@ -10,6 +11,14 @@
  box-shadow: -1px 1px 5px black;
  font-family: $cartefont;
  overflow: hidden;
+ transition: 0.5s ease;
+ flex-basis: 1;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px $gtavert;
+  transform: scale(1.1);
+  transition: 0.5s ease;
 }
 
 .card a {
@@ -19,11 +28,16 @@
  text-decoration: none;
  text-transform: uppercase;
  font-family: $cartefont;
+ color: black;
+ transition: 0.5s ease;
+ &:hover {
+  color: $gtavert;
+  transition: 0.5s ease;
+ }
 }
 
-.card-img {
+.card-img img {
  position: absolute;
- background-image: url(https://images.pexels.com/photos/1886096/pexels-photo-1886096.jpeg?cs=srgb&dl=pexels-adrianna-calvo-1886096.jpg&fm=jpg);
  background-position: center;
  background-size: cover;
  width: 100%;
@@ -34,27 +48,43 @@
 
 .nouveaucocktail {
  display: flex;
+ display: inline-block;
+ justify-content: center;
  position: relative;
  width: 300px;
- height: 200px;
+ height: 300px;
  border-radius: 10px;
  background-color: $gtarose;
  margin: 20px;
+ box-sizing: border-content;
  box-shadow: -1px 1px 5px black;
- display: inline-block;
+ font-family: $cartefont;
+ overflow: hidden;
+ color: $gtavert;
  }
 
 .nouveaucocktail label {
-  display: flex;
+  color: $gtavert;
+  display: inline;
+}
+
+.nouveaucocktail label.file {
+  color: $gtavert;
+    position: absolute;
+  top: 123px;
+}
+
+.form-control-file {
+  color: $gtavert;
   position: absolute;
-  top: 0px;
-  font-family: $gtafont;
- }
+  top: 150px;
+}
 
 .form-control {
   display: flex;
   position: absolute;
-  top: 27px;
+  top: 70px;
+  right: 25px;
   border-radius: 50px;
   width: 250px;
   background-color: white;
@@ -88,21 +118,27 @@ transition: 0.5s ease;
   color: white;
   text-shadow: 3px 0px 0px #DCC2E4;
   font-weight: bold;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
+
+// Carte de la show
 
 .cardshow {
  display: flex;
  display: inline-block;
- width: 300px;
- height: 100%;
+ width: 350px;
  border-radius: 10px;
  background-color: $gtarose;
+ background-position: center;
  margin: 20px;
  box-sizing: border-content;
  box-shadow: -1px 1px 5px black;
  font-family: $cartefont;
  overflow: hidden;
  color: $gtavert;
+}
+
+.cardshow img {
+  height: 150px;
 }
 

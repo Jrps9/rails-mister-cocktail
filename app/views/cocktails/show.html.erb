@@ -1,10 +1,21 @@
-<h1>détail du cocktail</h1>
+<h1>Cocktail-Side</h1>
 <div class="showcocktail">
+<div class="menu">
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail)%>
+<%= link_to "Update cocktail", edit_cocktail_path(@cocktail)%>
+  <%= link_to "Delete Cocktail",
+          cocktail_path(@cocktail),
+          method: :delete,
+          data: { confirm: "Are you sure?"}%>
+<%= link_to "Homepage", cocktails_path%>
+</div>
 <div class="cardshow">
-<p>Nom du cocktail :
-<br>
+<p>Nom du cocktail :</p>
 <%= @cocktail.name %>
-</p>
+        <% if @cocktail.photo.attached? %>
+        <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+        <% end %>
 <p>A l'intérieur de ce breuvage :</p>
 <ul class="list-group">
   <% @cocktail.doses.each do |dose| %>
@@ -18,11 +29,4 @@
 </ul>
 <% end %>
 </div>
-<%= link_to "Add dose", new_cocktail_dose_path(@cocktail)%>
-<%= link_to "Update cocktail", edit_cocktail_path(@cocktail)%>
-  <%= link_to "Delete Cocktail",
-          cocktail_path(@cocktail),
-          method: :delete,
-          data: { confirm: "Are you sure?"}%>
-<%= link_to "Homepage", cocktails_path%>
 </div>

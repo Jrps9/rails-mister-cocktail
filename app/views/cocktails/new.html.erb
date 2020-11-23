@@ -1,7 +1,13 @@
 <h1>Nouveau cocktail</h1>
+<div class="list">
+  <div class="menu">
+    <%= link_to "Homepage", cocktails_path%>
+  </div>
+  </div>
 <div class="nouveaucocktail">
   <%= simple_form_for (@cocktail) do |f| %>
     <%= f.input :name%>
+    <%= f.input :photo, as: :file, class: "photo-submit"%>
     <br>
     <%= f.button :submit, class: "btn-submit"%>
   <% end %>
