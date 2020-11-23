@@ -15,6 +15,7 @@
         <% if @cocktail.photo.attached? %>
         <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
         <% else %>
+        <% ('https://...')%>
         <% end %>
 <p>A l'intérieur de ce breuvage :</p>
 <ul class="list-group">
